@@ -121,7 +121,7 @@
 	/datum/species/goblinp,\
 )
 
-#define RACES_RESPECTED \
+#define RACES_SUPERIOR \
 	/datum/species/human/northern,\
 	/datum/species/elf/wood,\
 	/datum/species/human/halfelf,\
@@ -129,10 +129,9 @@
 	/datum/species/aasimar,\
 	/datum/species/lupian,\
 	/datum/species/vulpkanin,\
-	/datum/species/moth,\
-	/datum/species/dracon,
 
 #define RACES_TOLERATED \
+	/datum/species/dracon,\
 	/datum/species/elf/dark,\
 	/datum/species/tieberian,\
 	/datum/species/lizardfolk,\
@@ -143,6 +142,7 @@
 
 
 #define RACES_SHUNNED \
+	/datum/species/moth,\
 	/datum/species/halforc,\
 	/datum/species/anthromorphsmall,\
 	/datum/species/kobold,\
@@ -153,13 +153,15 @@
 #define RACES_CONSTRUCT \
 	/datum/species/construct/metal,\
 
-#define RACES_ALL_KINDS list(RACES_DESPISED, RACES_SHUNNED, RACES_TOLERATED, RACES_RESPECTED, RACES_CONSTRUCT)
+#define RACES_ALL_KINDS list(RACES_DESPISED, RACES_SHUNNED, RACES_TOLERATED, RACES_SUPERIOR, RACES_CONSTRUCT)
 
-#define RACES_NO_CONSTRUCT list(RACES_DESPISED, RACES_SHUNNED, RACES_TOLERATED, RACES_RESPECTED)
+#define RACES_NO_CONSTRUCT list(RACES_DESPISED, RACES_SHUNNED, RACES_TOLERATED, RACES_SUPERIOR)
 
-#define RACES_SHUNNED_UP list(RACES_SHUNNED, RACES_TOLERATED, RACES_RESPECTED)
+#define RACES_SHUNNED_UP list(RACES_SHUNNED, RACES_TOLERATED, RACES_SUPERIOR)
 
-#define RACES_TOLERATED_UP list(RACES_TOLERATED, RACES_RESPECTED)
+#define RACES_TOLERATED_UP list(RACES_TOLERATED, RACES_SUPERIOR)
+
+#define RACES_RESPECTED list(RACES_SUPERIOR)
 
 #define NOBLE_RACES_TYPES list(\
 	/datum/species/human/northern,\

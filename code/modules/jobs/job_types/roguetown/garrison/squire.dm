@@ -3,9 +3,9 @@
 	flag = SQUIRE
 	department_flag = GARRISON
 	faction = "Station"
-	total_positions = 4
-	spawn_positions = 4
-	allowed_races = RACES_ALL_KINDS
+	total_positions = 2
+	spawn_positions = 2
+	allowed_races = RACES_TOLERATED_UP
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT)
 	advclass_cat_rolls = list(CTAG_SQUIRE = 20)
