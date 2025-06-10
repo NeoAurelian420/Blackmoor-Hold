@@ -6,8 +6,8 @@
 	total_positions = 1
 	spawn_positions = 1
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = RACES_NO_CONSTRUCT
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	allowed_races = RACES_RESPECTED
+	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD)
 	display_order = JDO_MARSHAL
 	tutorial = "You are an agent of the crown in matters of law and military, making sure that laws are pushed, verified and carried out by the retinue upon the citizenry of the realm. \
 				While you preside over the knights and men-at-arms, much of your work happens behind a desk, deferring to the Sergeant-at-Arms or the Knight Captain to make sure your will is carried out in the field."
@@ -36,7 +36,7 @@
 	gloves = /obj/item/clothing/gloves/roguetown/angle
 	wrists = /obj/item/clothing/wrists/roguetown/bracers
 	id = /obj/item/scomstone/garrison
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/signal_horn = 1)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1)
 	if(H.mind)
 		
 		H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
@@ -48,17 +48,15 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/tracking, 2, TRUE)
-		H.change_stat("strength", 2) //important leadership role, but SHOULDN'T be frontlining
+		H.change_stat("strength", 2) //important leadership role, but should NEVER be frontlining. Using this role just for combat is BAD
 		H.change_stat("perception", 2)
 		H.change_stat("intelligence", 3)
 		H.change_stat("constitution", 1)
 		H.change_stat("endurance", 1)
-		H.change_stat("speed", 1)
+		H.change_stat("speed", -1)
 		H.change_stat("fortune", 1)
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_PERFECT_TRACKER, TRAIT_GENERIC)
-	H.verbs |= /mob/proc/haltyell
 	H.verbs |= list(/mob/living/carbon/human/proc/request_outlaw, /mob/living/carbon/human/proc/request_law, /mob/living/carbon/human/proc/request_law_removal, /mob/living/carbon/human/proc/request_purge)
 
 /datum/job/roguetown/marshal/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
