@@ -6,7 +6,7 @@
 	total_positions = 6
 	spawn_positions = 6
 	selection_color = JCOLOR_SOLDIER
-
+	always_show_on_latechoices = TRUE
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
@@ -88,7 +88,7 @@
 /datum/advclass/bogguardsman/footman
 	name = "Footman"
 	tutorial = "You are a footman, a basic rank and file fighter of the Bog Guard."
-	outfit = /datum/outfit/job/roguetown/bogguardsman/forester
+	outfit = /datum/outfit/job/roguetown/bogguardsman/footman
 	category_tags = list(CTAG_WARDEN)
 
 /datum/outfit/job/roguetown/bogguardsman/footman/pre_equip(mob/living/carbon/human/H)
