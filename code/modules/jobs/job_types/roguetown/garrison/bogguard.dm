@@ -10,7 +10,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
-	tutorial = "Disgraced nobles, peasants, convicts. These are now your comrades now, all are the same once they take up the tabbard. This patchwork force made up of those from all backgrounds is now the last bastion that holds back the tide of the Inhumen which the Gate stands as the last barrier to. Should you fail in your task, the damage will be immeasurable."
+	tutorial = "Disgraced nobles, peasants, convicts. These are now your comrades now, all are the same once they take up the tabard. This patchwork force made up of those from all backgrounds is now the last bastion that holds back the tide of the Inhumen which the Gate stands as the last barrier to. Should you fail in your task, the damage will be immeasurable."
 	display_order = JDO_TOWNGUARD
 	whitelist_req = TRUE
 	virtue_restrictions = list(/datum/virtue/utility/noble)
